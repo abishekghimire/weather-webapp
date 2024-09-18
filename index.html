@@ -21,18 +21,36 @@
           ><i class="fa-solid fa-magnifying-glass"></i
         ></span>
       </div>
-      <div class="weather-icon">
-        <img src="image.png" alt="" />
-      </div>
-      <p class="temperature">31°C</p>
-      <p class="condition">Mostly Cloudy</p>
-      <div class="divider"></div>
-      <div class="date-time">
-        <p>21-July-2023</p>
-        <p>Friday, 12:44 PM</p>
-        <p>Day</p>
-      </div>
-      <p class="location">Biratnagar</p>
+      <section class="weather-info" style="display: none">
+        <div class="weather-icon">
+          <img src="assets/weather-image.png" alt="" />
+        </div>
+        <p class="temperature">31°C</p>
+        <p class="condition">Mostly Cloudy</p>
+        <div class="divider"></div>
+        <div class="date-time">
+          <p>21-July-2023</p>
+          <p>Friday, 12:44 PM</p>
+          <p>Day</p>
+        </div>
+        <p class="location">
+          <i class="fa-solid fa-location-dot fa-xs" style="color: #000000"></i
+          ><span> Biratnagar</span>
+        </p>
+      </section>
+      <section class="search-city section-message">
+        <img class="message-img" src="assets/search-image.png" alt="" />
+        <div class="message-text">
+          <h1>Search City</h1>
+          <h4>Find out weather of the city!</h4>
+        </div>
+      </section>
+      <section class="not-found section-message" style="display: none">
+        <img class="not-found-img" src="assets/not-found-img.svg" alt="" />
+        <div class="message-text">
+          <h4>Enter correct city name!</h4>
+        </div>
+      </section>
     </div>
     <script src="main.js"></script>
   </body>
