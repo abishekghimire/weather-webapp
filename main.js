@@ -72,19 +72,17 @@ async function updateWeatherInfo(city) {
   conditionText.textContent = main;
   weatherSummaryImg.src = `assets/weather/${getWeatherIcon(id)}`;
 
-  const localTime = getLocalTime(timezone);
+  const localTime = getLocalTime();
   dateTimeText.innerHTML = `<p>${localTime}`;
 
   showDisplaySection(weatherInfoSection);
 }
 
 //function to get time acc. to timezone
-function getLocalTime(timezoneOffset) {
-  const utcTime = new Date().getTime();
-  const localTimeInMs = utcTime + timezoneOffset * 1000;
-  const localTime = new Date(localTimeInMs);
+function getLocalTime() {
+  const localTime = new Date();
 
-  return localTime.toLocaleString("en-US", {
+  return localTime.toLocaleString("en-GB", {
     weekday: "short",
     month: "short",
     day: "2-digit",
