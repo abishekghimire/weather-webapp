@@ -31,6 +31,8 @@ cityInput.addEventListener("keydown", (event) => {
     cityInput.blur();
   }
 });
+
+//fetching data from api
 async function getData(endPoint, city) {
   const apiUrl = `https://api.openweathermap.org/data/2.5/${endPoint}?q=${city}&appid=${apiKey}&units=metric`;
   const response = await fetch(apiUrl);
@@ -54,7 +56,7 @@ async function updateWeatherInfo(city) {
     return;
   }
 
-  //fetching info from api
+  //creating object
   const {
     name: location,
     main: { temp, feels_like },
@@ -62,6 +64,7 @@ async function updateWeatherInfo(city) {
     timezone,
   } = weatherData;
 
+  //updating data to view
   locationText.innerHTML = `<i class="fa-solid fa-location-dot fa-xs" style="color: #000000"></i> ${location}
 `;
   tempText.textContent = Math.round(temp) + "°C";
