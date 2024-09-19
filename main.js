@@ -9,7 +9,7 @@ const locationText = document.querySelector(".location");
 const tempText = document.querySelector(".temperature");
 const feelsLikeText = document.querySelector(".feels-like");
 const conditionText = document.querySelector(".condition");
-const weatherSummaryImg = document.querySelector(".weather-summary-img");
+const weatherSummaryImg = document.querySelector(".weather-img");
 const dateTimeText = document.querySelector(".date-time");
 
 const apiKey = "7a28bd357a496ca21f14cd9c08f04186";
@@ -70,7 +70,7 @@ async function updateWeatherInfo(city) {
   tempText.textContent = Math.round(temp) + "°C";
   feelsLikeText.textContent = "Feels like " + Math.round(feels_like) + "°C";
   conditionText.textContent = main;
-  weatherSummaryImg.src = `assets/weather/${getWeatherIcon(id)}`;
+  weatherSummaryImg.src = `./assets/weather/${getWeatherIcon(id)}`;
 
   const localTime = getLocalTime();
   dateTimeText.innerHTML = `<p>${localTime}`;
